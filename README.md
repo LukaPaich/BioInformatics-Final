@@ -26,3 +26,12 @@ The paper uses a custom deep learning model to achieve very high (~95% F1 score)
   
 ## The Data
   Originally, The Papers repository includes a lot of code and unnecessary dependencies for their data pipeline. We rewrote it from scratch to only use ```pandas``` framework and work with the latest Python version (3.12). The pipeline is easy to modify and could easily be changed to generate datasets for 3 or more classification problem. For example, with one line of change, the dataset will have 3 labels, either exon, intron, or the boundary between the two.
+
+## The Code
+  The project is structured into two main Jupyter Notebook files, each serving a distinct purpose in the workflow:
+
+  1. **prepare_dataset.ipynb**: Dedicated to the data preparation phase. It contains code to download and prepare the chromosome data for future training. We ran this notebook locally on our computers
+
+  2. **model.ipynb**: Focuses on the actual fine-tuning/training of the model. Trains on the output of the **prepare_dataset.ipynb**. We ran this notebook on kaggle.
+
+Together, these notebooks encapsulate the end-to-end process of preparing the data and training a model.
